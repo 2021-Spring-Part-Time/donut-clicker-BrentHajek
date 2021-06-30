@@ -5,9 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donut Clicker</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <header>
+    <h1>Welcome to the Fred the Baker Baking Company!</h1>
+    <nav class="header__nav">
+      <button class="about__Fred">About the Fred the Baker Baking Company</button>
+      <button class="about__inspiration">Our inspiration, Cookie Clicker</button>
+      <button class="about__me">About Me</button>
+    </nav>
+    </header>
     <div class="container"></div>
+    
+    <button id="makeDonutBtn">Click here to make a donut!</button>
+    <p>You have <span id="current__donut__counter"></span> donuts!</p>
+    <div id="myDonuts"></div>
+    
     <script src="./index.js"></script>
   </body>
 </html>
