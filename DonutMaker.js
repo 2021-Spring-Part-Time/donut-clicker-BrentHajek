@@ -10,7 +10,7 @@ class DonutMaker {
     }
 
     createADonut() {
-        this.donutCount += 1;
+        this.donutCount ++;
     }
     
     getDonutCount() {
@@ -22,10 +22,18 @@ class DonutMaker {
     }
 
     purchaseAutoClicker() {
-        (donutCount >= autoClickerCost) 
-        this.autoClickerCount += 1;
-        this.donutCount -= this.autoClickerCost;
-        this.autoClickerCost *= 1.1;  
+        if(this.donutCount >= this.autoClickerCost){
+            this.autoClickerCount++;
+            this.donutCount -= this.autoClickerCost;
+            this.autoClickerCost = this.autoClickerCost * 1.1;
+            this.autoClickerCost = Math.round(this.autoClickerCost);
+        }  
+    }
+
+    activateAutoClickers() {
+        if(this.autoClickerCount > 0) {
+            this.donutCount += this.autoClickerCount * 1;
+        }
     }
 
     getAutoClickerCount() {
@@ -53,14 +61,6 @@ class DonutMaker {
 
     createDonutWithDonutMultiplier() {
         this.donutCount += (Math.pow(1.2, this.donutMultiplierCount));
-    }
-
-    resetGame() {
-        this.donutCount === 0;
-        this.autoClickerCount === 0;
-        this.autoClickerCost === 100;
-        this.donutMultiplierCount === 0;
-        this.donutMultiplierCost === 10;
     }
 }
 
