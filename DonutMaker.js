@@ -25,7 +25,7 @@ class DonutMaker {
         if(this.donutCount >= this.autoClickerCost){
             this.autoClickerCount++;
             this.donutCount -= this.autoClickerCost;
-            this.autoClickerCost = this.autoClickerCost * 1.1;
+            this.autoClickerCost *= 1.1;
             this.autoClickerCost = Math.round(this.autoClickerCost);
         }  
     }
@@ -45,23 +45,24 @@ class DonutMaker {
     }
 
     purchaseDonutMultiplier() {
-        (donutCount >= this.donutMultiplierCost)
-        this.donutMultiplierCount += 1;
-        this.donutCount -= this.donutMultiplierCost;
-        this.donutMultiplierCost *= 1.2;
+        if(this.donutCount >= this.donutMultiplierCost) {
+            this.donutMultiplierCount ++;
+            this.donutCount -= this.donutMultiplierCost;
+            this.donutMultiplierCost *= 1.1;
+        }
+    }
+
+    activateDonutMultipliers() {
+        if(this.donutMultiplierCount > 0) {
+            this.donutCount += this.donutMultiplierCount * 1.2;
+        }
     }
 
     getDonutMultiplierCount() {
         return this.donutMultiplierCount;
     }
 
-    createDonutWithAutoClicker() {
-        this.donutCount += (1 * this.autoClickerCount);
-    }
 
-    createDonutWithDonutMultiplier() {
-        this.donutCount += (Math.pow(1.2, this.donutMultiplierCount));
-    }
 }
 
 export default DonutMaker;

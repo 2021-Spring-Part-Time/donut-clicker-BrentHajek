@@ -1,3 +1,7 @@
+const container = (document.querySelector('.container').innerText =
+  'mmmmmmmmm doughnuts.... ahhhhhhh!');
+
+
 // import { create } from 'istanbul-reports';
 // import DonutMaker from './DonutMaker.js';
 // import { createActionButton, createDonutEvent } from './utils.js';
@@ -31,3 +35,25 @@
 //     }) 
 // });
 
+
+
+
+
+// const numberOfDonuts = (donuts) => {
+//     return (
+//         'Current number of donuts: ' +
+//         donuts.donutCount
+//     );
+// };
+
+// export const createDonutEvent = (variable, elem, obj) => {
+//     variable.addEventListener('click', () => {
+//         obj.clickToCreateADonut();
+//         elem.innerText = numberOfDonuts(obj);
+//     });
+// };
+
+// export const createActionButton = (parentElem, childElem, text) => {
+//     childElem.innerText = text;
+//     parentElem.appendChild(childElem);
+// };

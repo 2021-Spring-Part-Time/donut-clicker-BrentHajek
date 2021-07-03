@@ -39,4 +39,18 @@ describe('The creation of DonutMaker', () => {
         expect(underTest.autoClickerCost).toEqual(146);
         expect(underTest.donutCount).toEqual(367)
     });
+
+    test('Will allow purchase of donut multiplier and decrease spent donuts?', () => {
+        const underTest = new DonutMaker(100,0,0,0,10);
+        underTest.purchaseDonutMultiplier();
+        expect(underTest.donutMultiplierCount).toEqual(1);
+        expect(underTest.donutCount).toEqual(90);
+    });
+
+    test('Will not allow purchase of donut multiplier with less than 10 donuts', () => {
+        const underTest = new DonutMaker(9,0,0,0,10);
+        underTest.purchaseDonutMultiplier();
+        expect(underTest.donutMultiplierCount).toEqual(0);
+        expect(underTest.donutCount).toEqual(9);
+    });
 });
