@@ -1,27 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Donut Clicker</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <header>
-    <h1>Welcome to the Fred the Baker Baking Company!</h1>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donut Clicker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body background="donuts.jpg" class="background__image">
+  <header>
+    <h1 class="top__header">Welcome to the Fred the Baker Baking Company!</h1>
     <nav class="header__nav">
-      <button class="about__Fred">About the Fred the Baker Baking Company</button>
-      <button class="about__inspiration">Our inspiration, Cookie Clicker</button>
-      <button class="about__me">About Me</button>
+      <button class="button" id="fredBtn" data-modal="modalOne">About the Fred the Baker Baking Company</button>
+      <button class="button" id="inspirationBtn" data-modal="modalTwo">Our inspiration, Cookie Clicker</button>
+      <button class="button" id="meBtn" data-modal="modalThree">About Me</button>
     </nav>
-    </header>
-    <div class="container"></div>
-    
-    <button id="makeDonutBtn">Click here to make a donut!</button>
-    <p>You have <span id="current__donut__counter"></span> donuts!</p>
-    <div id="myDonuts"></div>
-    
-    <script src="./index.js"></script>
-  </body>
+  </header>
+
+  <div class="modal" id="myModal">
+
+    <div class="Fred__modal__content" id="modalOne">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Fred Johnson was a baker in the town of Innsmouth, Massachusets for many years until he developed
+          a rather strange look and developed an affinity for swimming and reading the Necronomicon.
+          It was always donut-making time with Fred. And though he's now retired with his wife Pht'thya-l'y in the
+          city of Y'ha-nthlei, he wanted to leave this game as his legacy. Read more
+          <a href="https://en.wikipedia.org/wiki/The_Shadow_over_Innsmouth" target="blank">here</a>.</p>
+      </div>
+    </div>
+
+    <div class="instpiration__modal__content" id="modalTwo">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>This game was inspired by Cookie Clicker. Play it <a href="https://orteil.dashnet.org/cookieclicker/"
+            target="blank">here</a>.</p>
+      </div>
+    </div>
+
+    <div class="about__me__modal__content" id="modalThree">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>This version of Donut Clicker was designed by Brent Hajek.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container">
+    <div class="donut__game__stats">
+      <section id="myDonuts">
+        <button class="gameBtn" id="makeDonutBtn">Click here to make a donut!</button>
+        <h2 class="number__of__donuts__title">Your Current Number of Donuts</h2>
+        <p class="current__donut__count">0</p>
+        <h2 class="donuts__per__click__title">Donuts per click</h2>
+        <p class="current__donuts__per__click">1</p>
+      </section>
+      <section id="my__autoClickers">
+        <button class="gameBtn" id="purchaseAutoClickerBtn">Click here to purchase an Auto-Clicker!</button>
+        <h2 class="number__of__autoClickers__title">Number of Auto-Clickers Owned</h2>
+        <p class="current__autoClicker__count">0</p>
+        <h2 class="autoClicker__cost__title">Current Auto-Clicker cost</h2>
+        <p class="current__autoClicker__cost">100</p>
+      </section>
+      <section id="my__DonutMultipliers">
+        <button class="gameBtn" id="purchaseDonutMultiplierBtn">Click here to purchase a Donut Multiplier!</button>
+        <h2 class="number__of__donutMultipliers__title">Number of Donut Multipliers Owned</h2>
+        <p class="current__donutMultiplier__count">0</p>
+        <h2 class="donutMultiplier__cost__title">Current Donut Multiplier cost</h2>
+        <p class="current__donutMultiplier__cost">10</p>
+      </section>
+    </div>
+  </div>
+  <footer class="footer">
+    &copy; 2021 The Fred the Baker Donut Company
+  </footer>
+  <script src="./DonutMakerApp.js"></script>
+</body>
 </html>

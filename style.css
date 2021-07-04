@@ -1,26 +1,112 @@
+.background__image {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.top__header {
+	color: rgb(226, 43, 202);
+}
+
 header {
+	align-items: center;
 	background-color: none;
 	display: flex;
-	justify-content: space-between;
-	grid-column: 1 / -1;
+	flex-direction: column;
+	justify-content: center;
 	padding: 20px;
 }
 
 header h1 {
+	font-size: 40px;
+	font-weight: bold;
+	letter-spacing: 1px;
 	margin-left: 20px;
 	font-family: "Times New Roman", Times, serif;
 }
 
-header nav {
+/* header nav {
 	margin-right: 20px;
-}
+} */
 
-header nav ul {
+/* header nav ul {
 	display: flex;
     flex-direction: column;
 	list-style-type: none;
+} */
+
+/* header nav ul :hover{
+	font-size: x-large;
+} */
+
+
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+  
+  /* Modal Content */
+  .Fred__modal__content {
+	background-color: #fefefe;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+  }
+
+.container {
+	display: flex;
+	flex-direction: column;
+	margin-left: 5rem;
+	margin-right: 5rem;
+	margin-top: 2rem;
+	max-width: 80rem;
+	width: 90%;
 }
 
-header nav ul :hover{
-	font-size: x-large;
+.gameBtn{
+	background-color: rgb(61, 43, 226);
+}
+
+.gameBtn:hover {
+	background-color: blueviolet;
+}
+
+.donut__game__stats {
+	color: rgb(61, 43, 226);
+	display: grid;
+	font-size: larger;
+	font-weight: bold;
+	grid-template-columns: 1fr 1fr 1fr;
+	letter-spacing: 1px;
+	text-align: center;
+}
+
+.footer {
+	color: rgb(226, 43, 202);
+    margin-top: 2em;
+    text-align: center;
 }

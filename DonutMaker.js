@@ -32,7 +32,7 @@ class DonutMaker {
 
     activateAutoClickers() {
         if(this.autoClickerCount > 0) {
-            this.donutCount += this.autoClickerCount * 1;
+            this.donutCount += this.autoClickerCount * this.donutMultiplierCount;
         }
     }
 
@@ -46,17 +46,17 @@ class DonutMaker {
 
     purchaseDonutMultiplier() {
         if(this.donutCount >= this.donutMultiplierCost) {
-            this.donutMultiplierCount ++;
+            this.donutMultiplierCount *= 1.2;
             this.donutCount -= this.donutMultiplierCost;
             this.donutMultiplierCost *= 1.1;
         }
     }
 
-    activateDonutMultipliers() {
-        if(this.donutMultiplierCount > 0) {
-            this.donutCount += this.donutMultiplierCount * 1.2;
-        }
-    }
+    // activateDonutMultipliers() {
+    //     if(this.donutMultiplierCount > 0) {
+    //         this.donutCount += this.donutMultiplierCount * 1.2;
+    //     }
+    // }
 
     getDonutMultiplierCount() {
         return this.donutMultiplierCount;
