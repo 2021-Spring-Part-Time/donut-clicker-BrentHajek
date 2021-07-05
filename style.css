@@ -24,6 +24,14 @@ header h1 {
 	font-family: "Times New Roman", Times, serif;
 }
 
+.button{
+	background-color: rgb(233, 98, 193);
+}
+
+.button:hover {
+	background-color: rgb(226, 43, 186);
+}
+
 /* header nav {
 	margin-right: 20px;
 } */
@@ -54,8 +62,9 @@ header h1 {
 }
   
   /* Modal Content */
-  .Fred__modal__content {
-	background-color: #fefefe;
+  .modal-content {
+  	display:none;
+	background-color: #d3b6b6;
 	margin: auto;
 	padding: 20px;
 	border: 1px solid #888;

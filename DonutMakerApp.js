@@ -1,36 +1,5 @@
-// const container = (document.querySelector('.container').innerText =
-//   'mmmmmmmmm doughnuts.... ahhhhhhh!');
+import DonutMaker from './DonutMaker.js';
 
-// function myPopupFunction() {
-//   var popup = document.getElementsById('fredPopup');
-//   popup.classList.toggle('show');
-// }
-
-var modal = document.getElementById("myModal");
-
-var btn = document.getElementById("fredBtn");
-
-var span = document.getElementsByClassName("close")[0];
-
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-span.onclick = function() {
-  modal.style.display = "none";
-}
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-};
-
-
-
-
-
-// import { create } from 'istanbul-reports';
-// import DonutMaker from './DonutMaker.js';
-// import { createActionButton, createDonutEvent } from './utils.js';
 
 // const create = document.querySelector('makeDonutBtn'),
 //     div = document.querySelector('div');
@@ -83,3 +52,41 @@ window.onclick = function(event) {
 //     childElem.innerText = text;
 //     parentElem.appendChild(childElem);
 // };
+
+
+
+
+
+
+
+
+
+let buttons = document.getElementsByClassName('button');
+for(let i=0; i<buttons.length; i++) {
+  buttons[i].onclick = function(e) {
+    let id = e.target.id.replace('Btn','');
+    showModal(id);
+  }
+};
+
+let closes = document.getElementsByClassName('close');
+for(let i=0; i<closes.length; i++){
+  closes[i].onclick = function(e){
+      let id = e.target.id.replace('_closeBtn','');
+      let modal = document.getElementById(id + '_modal');
+      modal.style.display = 'none';
+  }
+};
+
+function showModal(id){
+    let modals = document.getElementsByClassName('modal-content');  
+    for(let i=0; i<modals.length; i++){
+       modals[i].style.display = 'none';
+    }
+  
+    let modal = document.getElementById(id + '_modal');
+    modal.style.display = 'block';
+};
+
+
+

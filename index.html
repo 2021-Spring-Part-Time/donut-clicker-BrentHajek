@@ -13,38 +13,36 @@
   <header>
     <h1 class="top__header">Welcome to the Fred the Baker Baking Company!</h1>
     <nav class="header__nav">
-      <button class="button" id="fredBtn" data-modal="modalOne">About the Fred the Baker Baking Company</button>
-      <button class="button" id="inspirationBtn" data-modal="modalTwo">Our inspiration, Cookie Clicker</button>
-      <button class="button" id="meBtn" data-modal="modalThree">About Me</button>
+      <button class="button" id="fredBtn" data-modal="fred_modal">About the Fred the Baker Baking Company</button>
+      <button class="button" id="inspirationBtn" data-modal="inspiration_modal">Our inspiration, Cookie Clicker</button>
+      <button class="button" id="meBtn" data-modal="me_modal">About Me</button>
     </nav>
   </header>
 
-  <div class="modal" id="myModal">
+  <div class="modals_container">
 
-    <div class="Fred__modal__content" id="modalOne">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>Fred Johnson was a baker in the town of Innsmouth, Massachusets for many years until he developed
-          a rather strange look and developed an affinity for swimming and reading the Necronomicon.
-          It was always donut-making time with Fred. And though he's now retired with his wife Pht'thya-l'y in the
-          city of Y'ha-nthlei, he wanted to leave this game as his legacy. Read more
-          <a href="https://en.wikipedia.org/wiki/The_Shadow_over_Innsmouth" target="blank">here</a>.</p>
-      </div>
+    <div class="modal-content" id="fred_modal">
+      <span id="fred_closeBtn" class="close">&times;</span>
+      <p>Fred Johnson was a baker in the town of Innsmouth, Massachusets for many years until he developed
+        a rather strange look and developed an affinity for swimming and reading the Necronomicon.
+        It was always donut-making time with Fred. And though he's now retired with his wife Pht'thya-l'y in the
+        city of Y'ha-nthlei, he wanted to leave this game as his legacy. Read more
+        <a href="https://en.wikipedia.org/wiki/The_Shadow_over_Innsmouth" target="blank">here</a>.</p>
     </div>
 
-    <div class="instpiration__modal__content" id="modalTwo">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>This game was inspired by Cookie Clicker. Play it <a href="https://orteil.dashnet.org/cookieclicker/"
-            target="blank">here</a>.</p>
-      </div>
+
+    <div class="modal-content" id="inspiration_modal">
+      <span id="inspiration_closeBtn" class="close">&times;</span>
+      <p>This game was inspired by Cookie Clicker. Play it <a href="https://orteil.dashnet.org/cookieclicker/"
+          target="blank">here</a>.</p>
     </div>
 
-    <div class="about__me__modal__content" id="modalThree">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>This version of Donut Clicker was designed by Brent Hajek.</p>
-      </div>
+    <div class="modal-content" id="me_modal">
+      <span id="me_closeBtn" class="close">&times;</span>
+      <p>This version of Donut Clicker was designed by Brent Hajek. Follow me <a
+          href="https://www.linkedin.com/in/brent-hajek/" target="blank">here</a>
+        on LinkedIn, <a href="https://github.com/BrentHajek" target="blank">here</a> on github, or
+        <a href="https://brenthajek.github.io/" target="blank">here</a> for my personal portfolio.</p>
     </div>
 
   </div>
@@ -79,4 +77,5 @@
   </footer>
   <script src="./DonutMakerApp.js"></script>
 </body>
+
 </html>
