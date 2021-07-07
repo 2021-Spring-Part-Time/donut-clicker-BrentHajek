@@ -1,8 +1,49 @@
 import DonutMaker from './DonutMaker.js';
 
 
-// const create = document.querySelector('makeDonutBtn'),
-//     div = document.querySelector('div');
+const makeDonutBtn = document.querySelector('#makeDonutBtn'),
+    autoClickerBtn = document.querySelector('#purchaseAutoClickerBtn'),
+    donutMultiplierBtn = document.querySelector('#purchaseDonutMultiplierBtn'),
+    myDonutsDiv = document.getElementById('myDonuts');
+
+const createdDonut = new DonutMaker(0,0,100,0,10)
+
+makeDonutBtn.addEventListener('click', () => {  
+  createdDonut.createADonut();
+  document.getElementById('current__donut__count').innerHTML = createdDonut.donutCount;
+})
+
+autoClickerBtn.addEventListener('click', () => {
+  createdDonut.purchaseAutoClicker();
+  document.getElementById('current__autoClicker__count').innerHTML = createdDonut.autoClickerCount;
+  document.getElementById('current__donut__count').innerHTML = createdDonut.donutCount;
+  document.getElementById('current__autoClicker__cost').innerHTML = createdDonut.autoClickerCost;
+})
+
+donutMultiplierBtn.addEventListener('click', () => {
+  createdDonut.purchaseDonutMultiplier();
+  document.getElementById('current__donutMultiplier__count').innerHTML = createdDonut.donutMultiplierCount;
+  document.getElementById('current__donut__count').innerHTML = createdDonut.donutCount;
+  document.getElementById('current__donutMultiplier__cost').innerHTML = createdDonut.donutMultiplierCost;
+  document.getElementById('current__donuts__per__click').innerHTML = createdDonut.getDonutMultiplier();
+})
+
+// var i = 1;
+// var interval = setInterval(function() {
+//   for (var i = 1, (autoClickerCount > 0), i++) {
+//     donutCount += (1 * autoClickerCount);
+//     document.getElementById('current__donut__count').innerHTML = createdDonut.donutCount;
+//   }
+// }, 1000);
+
+// var donutCount = 0;
+function autoClick() {
+    console.log('autoclick working');
+    createdDonut.activateAutoClickers();
+    console.log(createdDonut.donutCount);
+    document.getElementById('current__donut__count').innerHTML = createdDonut.donutCount;
+}
+setInterval(autoClick, 1000);
 
 
 // function myCurrentDonuts(donuts) {
