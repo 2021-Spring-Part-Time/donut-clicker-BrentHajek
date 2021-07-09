@@ -2,10 +2,8 @@ class DonutMaker {
     constructor(donutCount, autoClickerCount, autoClickerCost, donutMultiplierCount, donutMultiplierCost) {
         this.donutCount = donutCount;
         this.autoClickerCount = autoClickerCount;
-        //autoClickers start at 100 donuts
         this.autoClickerCost = autoClickerCost;
         this.donutMultiplierCount = donutMultiplierCount;
-        //donutMultipliers start at 10 donuts
         this.donutMultiplierCost = donutMultiplierCost;
     }
 
