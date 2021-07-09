@@ -3,6 +3,7 @@ import DonutMaker from './DonutMaker.js';
 const makeDonutBtn = document.querySelector('#makeDonutBtn'),
     autoClickerBtn = document.querySelector('#purchaseAutoClickerBtn'),
     donutMultiplierBtn = document.querySelector('#purchaseDonutMultiplierBtn'),
+    resetButton = document.querySelector('#resetBtn'),
     myDonutsDiv = document.getElementById('myDonuts');
 
 const createdDonut = new DonutMaker(0,0,100,0,10)
@@ -60,5 +61,7 @@ function showModal(id){
     modal.style.display = 'block';
 };
 
-
+resetButton.addEventListener('click', () => {
+  location.reload();
+});
 
