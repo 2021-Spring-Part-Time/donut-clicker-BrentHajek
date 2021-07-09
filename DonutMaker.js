@@ -58,12 +58,6 @@ class DonutMaker {
         }
     }
 
-    // activateDonutMultipliers() {
-    //     if(this.donutMultiplierCount > 0) {
-    //         this.donutCount += this.donutMultiplierCount * 1.2;
-    //     }
-    // }
-
     getDonutMultiplierCount() {
         return this.donutMultiplierCount;
     }
