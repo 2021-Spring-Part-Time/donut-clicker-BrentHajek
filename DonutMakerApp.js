@@ -62,6 +62,6 @@ function showModal(id){
 };
 
 resetButton.addEventListener('click', () => {
-  location.reload();
+  location = location;
 });
 
