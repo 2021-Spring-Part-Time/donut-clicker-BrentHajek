@@ -37,28 +37,28 @@ header h1 {
 	background-color: rgb(226, 43, 186);
 }
 
-  .modal-content {
+.modal-content {
   	display:none;
 	background-color: #bd75cc;
 	margin: auto;
 	padding: 20px;
 	border: 1px solid #888;
 	width: 80%;
-  }
+}
   
-  .close {
+.close {
 	color: #222020;
 	float: right;
 	font-size: 28px;
 	font-weight: bold;
-  }
+}
   
-  .close:hover,
-  .close:focus {
+.close:hover,
+.close:focus {
 	color: #000;
 	text-decoration: none;
 	cursor: pointer;
-  }
+}
 
 .container {
 	display: flex;
