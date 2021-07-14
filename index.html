@@ -1,13 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Donut Clicker</title>
-  </head>
-  <body>
-    <div class="container"></div>
-    <script src="./index.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donut Clicker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body background="donuts2.jpg" class="background__image">
+  <header>
+    <h1 class="top__header">Welcome to the Fred the Baker Baking Company!</h1>
+    <nav class="header__nav">
+      <button class="button" id="fredBtn" data-modal="fred_modal">About the Fred the Baker Baking Company</button>
+      <button class="button" id="inspirationBtn" data-modal="inspiration_modal">Our inspiration, Cookie Clicker</button>
+      <button class="button" id="meBtn" data-modal="me_modal">About Me</button>
+    </nav>
+  </header>
+
+  <div class="modals_container">
+
+    <div class="modal-content" id="fred_modal">
+      <span id="fred_closeBtn" class="close">&times;</span>
+      <p>Fred Johnson was a baker and former marine here on Earth. For many years Fred loved his bakery,
+        much as he loved the United Nations and his homeworld. It was always donut-making time with Fred
+        until he decided to retire and take up a position with Tycho Manufacturing and to make the best
+        donuts in The Belt, he wanted to leave this game as his legacy. Read more
+        <a href="https://expanse.fandom.com/wiki/Fred_Johnson_(TV)" target="blank">here</a>.</p>
+    </div>
+
+
+    <div class="modal-content" id="inspiration_modal">
+      <span id="inspiration_closeBtn" class="close">&times;</span>
+      <p>This game was inspired by Cookie Clicker. Play it <a href="https://orteil.dashnet.org/cookieclicker/"
+          target="blank">here</a>.</p>
+    </div>
+
+    <div class="modal-content" id="me_modal">
+      <span id="me_closeBtn" class="close">&times;</span>
+      <p>This version of Donut Clicker was designed by Brent Hajek. Connect with me on LinkedIn <a
+          href="https://www.linkedin.com/in/brent-hajek/" target="blank">here</a>, 
+        on github <a href="https://github.com/BrentHajek" target="blank">here</a>, or see 
+        <a href="https://brenthajek.github.io/" target="blank">here</a> for my personal portfolio.</p>
+    </div>
+
+  </div>
+
+  <div class="container">
+    <div class="donut__game__stats">
+      <section id="myDonuts">
+        <button class="gameBtn" id="makeDonutBtn">Click here to make a donut!</button>
+        <h2 class="number__of__donuts__title">Your Current Number of Donuts</h2>
+        <p id="current__donut__count">0</p>
+        <h2 class="donuts__per__click__title">Donuts per click</h2>
+        <p id="current__donuts__per__click">1</p>
+      </section>
+      <section id="my__autoClickers">
+        <button class="gameBtn" id="purchaseAutoClickerBtn">Click here to purchase an Auto-Clicker!</button>
+        <h2 class="number__of__autoClickers__title">Number of Auto-Clickers Owned</h2>
+        <p id="current__autoClicker__count">0</p>
+        <h2 class="autoClicker__cost__title">Current Auto-Clicker cost</h2>
+        <p id="current__autoClicker__cost">100</p>
+      </section>
+      <section id="my__DonutMultipliers">
+        <button class="gameBtn" id="purchaseDonutMultiplierBtn">Click here to purchase a Donut Multiplier!</button>
+        <h2 class="number__of__donutMultipliers__title">Number of Donut Multipliers Owned</h2>
+        <p id="current__donutMultiplier__count">0</p>
+        <h2 class="donutMultiplier__cost__title">Current Donut Multiplier cost</h2>
+        <p id="current__donutMultiplier__cost">10</p>
+      </section>
+    </div>
+    <div class="reset">
+      <button id="resetBtn">Reset Game</button>
+    </div>
+  </div>
+  <footer class="footer">
+    &copy; 2021 The Fred the Baker Baking Company
+  </footer>
+  <script src="./DonutMakerApp.js"></script>
+</body>
+
 </html>
